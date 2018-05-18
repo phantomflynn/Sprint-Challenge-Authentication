@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import glamorous from 'glamorous';
+
+const Button = glamorous.button({
+  width: '7%',
+  height: '2rem',
+  margin: '1% auto 3%',
+  borderRadius: '3px',
+  backgroundColor: 'transparent',
+  color: 'white',
+  fontWeight: 600,
+  border: '1px solide white'
+});
+
+const Joke = glamorous.div({
+  color: 'white',
+  margin: '1.5% auto'
+})
 
 class Jokes extends Component {
   state = {
@@ -23,9 +40,20 @@ class Jokes extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={() => this.handleLogout()}>sign out</button>
-        {this.state.jokes.map(joke => <div key={joke.id}>{joke.setup}</div>)}
+      <div className="cardz">
+        <Button onClick={() => this.handleLogout()}>Sign Out</Button>
+        <div className="flipContainer">
+          {this.state.jokes.map(joke => (
+            // <Joke key={joke.id}>
+            //   <div>{joke.setup}</div>
+            //   <li>{joke.punchline}</li>
+            // </Joke>
+              <div class="flipper">
+                <div class="front">{joke.setup}</div>
+                <div class="back">{joke.punchline}</div>
+              </div>
+          ))}
+        </div>
       </div>
     )
   }
