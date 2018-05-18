@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, withRouter } from 'react-router-dom';
-import Jokes from './components/jokes';
-import Main from './components/fresh';
+import Jokes from './components/jokes/jokes';
+import Main from './components/login/fresh';
 
 class App extends Component {
   render() {
