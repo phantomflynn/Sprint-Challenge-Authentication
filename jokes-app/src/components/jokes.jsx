@@ -11,7 +11,9 @@ const Button = glamorous.button({
   backgroundColor: 'transparent',
   color: 'white',
   fontWeight: 600,
-  border: '1px solide white'
+  border: '1px solide white',
+  ':hover': { color: 'black', backgroundColor: 'white', cursor: 'pointer' },
+  ':focus': { color: 'black', backgroundColor: 'white' }
 });
 
 const Joke = glamorous.div({

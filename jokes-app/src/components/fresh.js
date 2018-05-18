@@ -20,12 +20,12 @@ const Container = glamorous.div({
 
 const Input = glamorous.input({
   margin: 'auto',
-  width: '25%',
+  width: '23%',
   height: '20%',
   padding: '0 1% 0 1%',
   fontSize: '1.5rem',
   border: 'none',
-  borderBottom: '2px solid white',
+  borderBottom: '1px solid white',
   fontWeight: 'bold',
   color: 'white',
   textAlign: 'center'
@@ -33,7 +33,7 @@ const Input = glamorous.input({
 
 const ButtonContainer = glamorous.div({
   margin: 'auto',
-  width: '25%',
+  width: '23%',
   height: '20%',
   display: 'flex',
   justifyContent: 'space-between'
